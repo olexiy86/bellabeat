@@ -86,7 +86,7 @@ FROM `project-bellabeat-414921.fitbit.clean_heart_rate`
 GROUP BY Id
 ;
 ```
-<img src="summary_hr.png" width="800" height="300">
+<img src="summary_hr.png" width="700" height="260">
 
 Only 7 distinct Ids were returned. This table shows that the highest heart rate was  203 bpm and lowest 38 bpm, which overall tells about a very good fitness shape of a user with Id 2022484408. 
 Based on this data almost all users lead an active lifestyle.
