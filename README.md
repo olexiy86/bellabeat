@@ -201,7 +201,8 @@ ggplot(data=filtered_data,aes(x=sleep_inertia_min, y=total_steps)) +
 ```
 ![Steps](Steps.jpeg)
 
-Area highlighted with green shows that the highest number of steps is attributed to lower sleep inertia.
+
+NOTE: Area highlighted with green shows that the highest number of steps is attributed to lower sleep inertia.
 
 
 Next we plot **Sleep Inertia vs Active Minutes**:
@@ -215,6 +216,20 @@ ggplot(data=filtered_data, aes(x=sleep_inertia_min, y=active_min)) +
   annotate("rect", xmin=c(0), xmax=c(80), ymin=c(175), ymax=c(220), alpha=0.2, color="green", fill="green")
 ```
 ![Active Minutes](active_minutes.jpeg)
+
+Additionally, we create scatterplot **Sleep Inertia vs Calories**:
+```
+ggplot(data=filtered_data, aes(x=sleep_inertia_min, y=calories)) + 
+  geom_point(color='#5C1E7E', size = 1) +
+  scale_x_continuous(breaks=number_ticks(10)) +
+  scale_y_continuous(breaks=number_ticks(10)) +
+  labs(title = "Sleep Inertia vs. Calories") +
+  xlab('Sleep Inertia (min)') +
+  ylab('Calories') +
+annotate("rect", xmin=c(0), xmax=c(100), ymin=c(4000), ymax=c(5000), 
+alpha=0.2, color="green", fill="green")
+```
+![calories](Calories.jpeg)
 
 
 
