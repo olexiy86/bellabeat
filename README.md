@@ -199,6 +199,9 @@ ggplot(data=filtered_data,aes(x=sleep_inertia_min, y=total_steps)) +
   ylab('Total Steps') +
   annotate("rect", xmin=c(0), xmax=c(70), ymin=c(18000) , ymax=c(24000), alpha=0.2, color="green", fill="green")
 ```
+![Steps](Steps.jpeg)
+
+Area highlighted with green shows that the highest number of steps is attributed to lower sleep inertia.
 
 
 
