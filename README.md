@@ -86,7 +86,7 @@ FROM `project-bellabeat-414921.fitbit.clean_heart_rate`
 GROUP BY Id
 ;
 ```
-<img src="summary_hr.png" width="700" height="260">
+<img src="summary_hr.png" width="750" height="290">
 
 Only 7 distinct Ids were returned. This table shows that the highest heart rate was  203 bpm and lowest 38 bpm, which overall tells about a very good fitness shape of a user with Id 2022484408. 
 Based on this data almost all users lead an active lifestyle.
@@ -105,7 +105,7 @@ ORDER BY avg_steps DESC
 LIMIT 10
 ;
 ```
-![summary_steps](summary_steps_dist.png)
+<img src="summary_steps_dist.png" width="750" height="350">
 
 The above table shows no relation between calories and steps taken (see rows 3, 6 and 7 in of the table). We can assume that calories spent per day may relate to personal basal metabolic rate (BMR) which indicates the number of calories a person burns as the body performs basic (basal) life-sustaining function. The higher the BMR the more calories the burns without  physical activities.
 
