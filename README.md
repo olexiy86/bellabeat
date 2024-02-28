@@ -51,7 +51,7 @@ FROM `heart_rate_1`
 ```
 
 
-3. In order to perform analysis more efficiently we decided to combine columns with data we need in a single table named ‘filtered_data’ from the following tables: ‘daily_activity’, ‘daily_calories’, and ‘sleep_inertia’. Using FULL OUTER JOIN clause allowed us  to include all data from all tables:
+3. In order to perform analysis more efficiently we decided to combine columns with data we need in a single table from the following tables: ‘daily_activity’, ‘daily_calories’, and ‘sleep_inertia’. Using FULL OUTER JOIN clause allowed us  to include all data from all tables:
 
 ```
 SELECT daily_activity.Id, 
@@ -70,4 +70,24 @@ FROM project-bellabeat-414921.fitbit.daily_activity
 FULL OUTER JOIN project-bellabeat-414921.fitbit.daily_calories ON daily_activity.Id = daily_calories.Id
 FULL OUTER JOIN project-bellabeat-414921.fitbit.sleep_inertia ON daily_activity.Id = sleep_inertia.Id
 ```
+
+Output of this query was saved as ‘filtered_data’ csv file in the local folder.
+
+
+## Descriptive statistics. 
+Finding average, minimun and maximum heart rate values of users. 
+
+```
+SELECT DISTINCT(user) as Id, 
+     ROUND(AVG(hr_bpm), 1) AS avg_bpm,
+     MIN(hr_bpm) AS min_bpm,
+     MAX(hr_bpm) AS max_bpm
+FROM `project-bellabeat-414921.fitbit.clean_heart_rate`
+GROUP BY Id
+;
+```
+Only 7 distinct Ids were returned. This table shows that the highest heart rate was  203 bpm and lowest 38 bpm, which overall tells about a very good fitness shape of a user with Id 2022484408. 
+Based on this data almost all users lead an active lifestyle.
+
+
 
