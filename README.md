@@ -245,3 +245,10 @@ Phenomenon of sleep inertia is well outlined in this article by Tanja Premru-Sr�
 Adding additional measurement to Ivy Health Tracker that monitors sleep inertia will greatly improve users' awareness and understanding about resting and activity status. Low sleep inertia reflects better quality of sleep and higher energy level, and vice versa. 
 
 
+## Creating an interactive dashboard in Tableau with key wellness metrics. 
+To demonstrate relations between sleep inertia and calories, activity minutes and  heart rate, we created an interactive dashboard named [Wellnes metrics](https://public.tableau.com/views/Dailyheartratetrend/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link). By using filter ‘user’  this dashboard demonstrates how key metrics change from user to user. Since the heart rate dataset was limited to only 7 distinct user Ids, the filter has only 7 options. There is one user that has no data on ‘sleep inertia’
+
+
+
+
+
