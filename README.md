@@ -179,12 +179,26 @@ library('ggplot2')
 library(readr)
 ```
 
-Uploading 'filtered_data.csv' 
+Uploading 'filtered_data.csv':
 ```
-> filtered_data <- read_csv("Desktop/Data Analytics/Google Data Analytics /Case Study (Project)/Case Study - Bellabeat/Fitabase Data 4.12.16-5.12.16/filtered_data.csv")
+> filtered_data <- read_csv("Desktop/Data Analytics/Google Data Analytics/
+Case Study(Project)/Case Study - Bellabeat/Fitabase Data 4.12.16-5.12.16/filtered_data.csv")
 ```
 
-
+First, we supply a function argument to scale ggplot. We use that function to calculate the tick locations:
+```
+number_ticks <- function(n) {function(limits) pretty(limits, n)}
+```
+Then we create a scatter plot Sleep inertia vs Total steps:
+```
+ggplot(data=filtered_data,aes(x=sleep_inertia_min, y=total_steps)) + 
+  geom_point(color='#5C1E7E', size = 1) +
+  scale_x_continuous(breaks=number_ticks(10)) +
+  labs(title = "Sleep Inertia vs. Steps") +
+  xlab('Sleep Inertia (min)') +
+  ylab('Total Steps') +
+  annotate("rect", xmin=c(0), xmax=c(70), ymin=c(18000) , ymax=c(24000), alpha=0.2, color="green", fill="green")
+```
 
 
 
