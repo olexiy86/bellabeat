@@ -199,10 +199,10 @@ ggplot(data=filtered_data,aes(x=sleep_inertia_min, y=total_steps)) +
   ylab('Total Steps') +
   annotate("rect", xmin=c(0), xmax=c(70), ymin=c(18000) , ymax=c(24000), alpha=0.2, color="green", fill="green")
 ```
-![Steps](Steps.jpeg)
-
+<img src="Steps.jpeg" width="750" height="500">
 
 NOTE: Area highlighted with green shows that the highest number of steps is attributed to lower sleep inertia.
+
 
 
 Next we plot **Sleep Inertia vs Active Minutes**:
@@ -215,7 +215,9 @@ ggplot(data=filtered_data, aes(x=sleep_inertia_min, y=active_min)) +
   ylab('active minutes') +
   annotate("rect", xmin=c(0), xmax=c(80), ymin=c(175), ymax=c(220), alpha=0.2, color="green", fill="green")
 ```
-![Active Minutes](active_minutes.jpeg)
+
+<img src="active_minutes.jpeg" width="750" height="500">
+
 
 Additionally, we create scatterplot **Sleep Inertia vs Calories**:
 ```
@@ -229,14 +231,15 @@ ggplot(data=filtered_data, aes(x=sleep_inertia_min, y=calories)) +
 annotate("rect", xmin=c(0), xmax=c(100), ymin=c(4000), ymax=c(5000), 
 alpha=0.2, color="green", fill="green")
 ```
-![calories](Calories.jpeg)
+<img src="Calories.jpeg" width="750" height="500">
 
 
-## Summary of analysis and key findings.
-Exploratory Data Analysis (EDA) using RStudio allowed us to identify that Sleep Inertia (the difference between ‘time asleep’ and ‘time in bed’) may serve as an additional indicator of activity level and better quality lifestyle in addition to other metrics.
-On three different scatter plots shown above it is important to notice that most of the user’s sleep inertia values in this study fell between 0 and 100 min. There are some users with sleep inertia between 100 and 350 min. 
-We can conclude that the users with higher daily activity levels (based on calories,  total steps, total distance and active minutes) tend to have lower sleep inertia values (between 0 and 75 minutes). At the same time users with high values of sleep inertia (between 100 and 375 min) spent less calories, did less steps, and had less active minutes.
-Although statistically significant correlations were not found between sleep inertia and calories burnt, total steps, total distance and active minutes. Further analysis required with larger data sample to establish relations between these parameters. Exploring daily activity patterns of users with lower sleep inertia may provide better understanding of healthy and active lifestyle.
+
+## Summary of analysis and key findings:
+ - Axploratory Data Analysis (EDA) using RStudio allowed us to identify that Sleep Inertia (the difference between ‘time asleep’ and ‘time in bed’) may serve as an additional indicator of activity level and better quality lifestyle in addition to other metrics.
+- On three different scatter plots shown above it is important to notice that most of the user’s sleep inertia values in this study fell between 0 and 100 min. There are some users with sleep inertia between 100 and 350 min.
+- We can assume that the users with higher daily activity levels (based on calories,  total steps, total distance and active minutes) tend to have lower sleep inertia values (between 0 and 75 minutes). At the same time users with high values of sleep inertia (between 100 and 375 min) spent less calories, did less steps, and had less active minutes.
+- Although statistically significant correlations were not found between sleep inertia and calories burnt, total steps, total distance and active minutes. Further analysis required with larger data sample to establish relations between these parameters. Exploring daily activity patterns of users with lower sleep inertia may provide better understanding of healthy and active lifestyle.
 
 
 ## Recommendations.
@@ -248,7 +251,8 @@ Adding additional measurement to Ivy Health Tracker that monitors sleep inertia 
 ## Creating an interactive dashboard in Tableau. 
 To demonstrate relations between sleep inertia and calories, activity minutes and  heart rate, we created an interactive dashboard [Wellnes metrics](https://public.tableau.com/views/Dailyheartratetrend/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link). By using filter ‘user’  this dashboard demonstrates how key metrics change from user to user. Since the heart rate dataset was limited to only 7 distinct user Ids, the filter has only 7 options. There is one user that has no data on ‘sleep inertia’
 
-![wellness](wellness.png)
+<img src="wellness.png" width="750" height="600">
+
 
 
 
