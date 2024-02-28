@@ -1,12 +1,16 @@
 # Wellness
 
-
+## About this project
 This case study is my capestone project of Google Data Analytics Certificate.
+Main task of the project is to analyze smart device usage data in order to gain insight into how consumers use non-Bellabeat smart
+devices and apply these insights into one Bellabeat product. Discovered insights will help guide marketing strategy for the company. 
 
-## Busuness task
- analyze smart device usage data in order to gain insight into how consumers use non-Bellabeat smart
-devices. Choose one Bellabeat product to apply these insights to in your presentation. These questions
-will guide your analysis:
-1. What are some trends in smart device usage?
-2. How could these trends apply to Bellabeat customers?
-3. How could these trends help influence Bellabeat marketing strategy?
+**A clear statement of the business task:**
+Explore user’s data (Fitbit) to identify trends and patterns in daily activities and identify key wellness indicators of healthy lifestyle.
+
+
+**Questions:**
+ - What are some trends in smart device usage?
+ - What specific metrics indicate a more active lifestyle?
+ - How could these trends impact Bellabeat marketing strategy?
+
