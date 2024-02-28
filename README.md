@@ -168,6 +168,23 @@ We decide to keep this observation.
 
 
 
+## Initial exploratory visualizations in R Studio.
+After performing descriptive statistics we moved our analysis in R Studio. 
+The goal was to study relationships and patterns between sleep inertia and other observed wellness metrics.
+
+Setting up environment:
+```
+libralry('tidyverse')
+library('ggplot2')
+library(readr)
+```
+
+Uploading 'filtered_data.csv' 
+```
+> filtered_data <- read_csv("Desktop/Data Analytics/Google Data Analytics /Case Study (Project)/Case Study - Bellabeat/Fitabase Data 4.12.16-5.12.16/filtered_data.csv")
+```
+
+
 
 
 
