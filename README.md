@@ -75,7 +75,7 @@ Output of this query was saved as ‘filtered_data’ csv file in the local fold
 
 
 ## Descriptive statistics. 
-Finding average, minimun and maximum heart rate values of users. 
+- Finding average, minimun and maximum heart rate values of users. 
 
 ```
 SELECT DISTINCT(user) as Id, 
@@ -86,8 +86,24 @@ FROM `project-bellabeat-414921.fitbit.clean_heart_rate`
 GROUP BY Id
 ;
 ```
+
+![summary of heart rate](summary_hr.png)
+
 Only 7 distinct Ids were returned. This table shows that the highest heart rate was  203 bpm and lowest 38 bpm, which overall tells about a very good fitness shape of a user with Id 2022484408. 
 Based on this data almost all users lead an active lifestyle.
 
+- Average values of Steps, Distance and Calories for top 10 users sorted by  steps in descending order:
+
+```
+SELECT DISTINCT(Id),
+       ROUND(AVG(total_steps), 1) AS avg_steps,
+       ROUND(AVG(total_distance), 1) AS avg_distance,
+       ROUND(AVG(calories), 1) AS avg_calories
+FROM `project-bellabeat-414921.fitbit.COMBINED_DATA`
+GROUP BY Id
+ORDER BY avg_steps DESC
+LIMIT 10
+;
+```
 
 
