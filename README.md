@@ -92,6 +92,7 @@ GROUP BY Id
 Only 7 distinct Ids were returned. This table shows that the highest heart rate was  203 bpm and lowest 38 bpm, which overall tells about a very good fitness shape of a user with Id 2022484408. 
 Based on this data almost all users lead an active lifestyle.
 
+
 - Average values of steps, distance and calories for top 10 users sorted by steps in descending order:
 
 ```
@@ -109,6 +110,7 @@ LIMIT 10
 
 The above table shows no relation between calories and steps taken (see rows 3, 6 and 7 in of the table). We can assume that calories spent per day may relate to personal basal metabolic rate (BMR) which indicates the number of calories a person burns as the body performs basic (basal) life-sustaining function. The higher the BMR the more calories the burns without  physical activities.
 
+
 - Daily Average values of intensity minutes:
 
 ```
@@ -118,12 +120,12 @@ SELECT  DISTINCT(Id),
        ROUND(AVG(light_min), 1) AS avg_light_min,
        ROUND(AVG(sed_min), 1) as avg_sedentary_min
 
-
 FROM `project-bellabeat-414921.fitbit.COMBINED_DATA`
 GROUP BY Id
 ORDER BY avg_active_min DESC
 LIMIT 10
 ;
 ```
+
 
 
