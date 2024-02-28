@@ -1,6 +1,11 @@
 # Wellness
 
 ## About this project
+
+Bellabeat is a high-tech company that manufactures health-focused smart products for women founded in 2013 by Urška Sršen and Sando Mur.
+This technology tracks data on activity, sleep, stress, and reproductive health has allowed Bellabeat to empower women with
+knowledge about their own health and habits. 
+
 Main task of the project is to analyze smart device usage data in order to gain insight into how consumers use non-Bellabeat smart
 devices and apply these insights into one Bellabeat product. Discovered insights will help guide marketing strategy for the company. 
 
