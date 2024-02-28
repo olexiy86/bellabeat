@@ -214,6 +214,7 @@ ggplot(data=filtered_data, aes(x=sleep_inertia_min, y=active_min)) +
   ylab('active minutes') +
   annotate("rect", xmin=c(0), xmax=c(80), ymin=c(175), ymax=c(220), alpha=0.2, color="green", fill="green")
 ```
-![Active Minutes](Activeminutes.jpeg)
+![Active Minutes](active_minutes.jpeg)
+
 
 
