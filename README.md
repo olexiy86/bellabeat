@@ -125,8 +125,7 @@ ORDER BY avg_active_min DESC
 LIMIT 10
 ;
 ```
-![activity](summary_activity.png)
-
+<img src="summary_activity.png" width="830" height="350">
 
 - Average, minimum and maximum values of time asleep (in hours):
 ```
