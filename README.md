@@ -161,9 +161,9 @@ GROUP BY Id
 LIMIT 10
 ;
 ```
-![sleep_inertia](summary_sleep_inertia)
+![sleep_inertia](summary_sleep_inertia.png)
 
-The values in the first row returned average sleep inertia of 309 min (~5 hours) which might be incorrectly registered input of time in bed sicne average time asleep for this user is 10.8 hours
+The values in the first row returned average sleep inertia of 309 min (~5 hours) which might be incorrectly registered input of time in bed since average time asleep for this user is 10.8 hours
 We decide to keep this observation. 
 
 
