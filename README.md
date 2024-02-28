@@ -189,7 +189,7 @@ First, we supply a function argument to scale ggplot. We use that function to ca
 ```
 number_ticks <- function(n) {function(limits) pretty(limits, n)}
 ```
-Then we create a scatter plot Sleep inertia vs Total steps:
+Then we create a scatterplot **Sleep inertia vs Total Steps**:
 ```
 ggplot(data=filtered_data,aes(x=sleep_inertia_min, y=total_steps)) + 
   geom_point(color='#5C1E7E', size = 1) +
@@ -203,5 +203,17 @@ ggplot(data=filtered_data,aes(x=sleep_inertia_min, y=total_steps)) +
 
 Area highlighted with green shows that the highest number of steps is attributed to lower sleep inertia.
 
+
+Next we plot **Sleep Inertia vs Active Minutes**:
+```
+ggplot(data=filtered_data, aes(x=sleep_inertia_min, y=active_min)) + 
+  geom_point(color='#5C1E7E', size = 1) +
+  scale_x_continuous(breaks=number_ticks(10)) +
+  labs(title = "Sleep Inertia vs. Active Minutes") +
+  xlab('sleep inertia (min)') +
+  ylab('active minutes') +
+  annotate("rect", xmin=c(0), xmax=c(80), ymin=c(175), ymax=c(220), alpha=0.2, color="green", fill="green")
+```
+![Active Minutes](Activeminutes.jpeg)
 
 
