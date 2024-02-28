@@ -137,12 +137,35 @@ SELECT DISTINCT(Id),
        ROUND(MAX(time_asleep_h), 1) AS max_time_asleep_h
 
 
-FROM `project-bellabeat-414921.fitbit.COMBINED_DATA`
+FROM `project-bellabeat-414921.fitbit.filtered_data`
 WHERE time_asleep_h is NOT Null
 GROUP BY Id
 LIMIT 10
 ;
 ```
+![time_asleep](summary_sleep.png)
+
+
+- Average, minimum and maximum values of sleep inertia (in minutes):
+
+```
+SELECT DISTINCT(Id),
+       ROUND(AVG(sleep_inertia_min), 1) AS avg_sleep_inertia,
+       ROUND(MIN(sleep_inertia_min), 1) AS min_sleep_inertia,
+       ROUND(MAX(sleep_inertia_min), 1) AS max_sleep_inertia
+
+
+FROM `project-bellabeat-414921.fitbit.filtered_data`
+WHERE sleep_inertia_min is NOT Null
+GROUP BY Id
+LIMIT 10
+;
+```
+![sleep_inertia](sleep_inertia)
+
+The values in the first row returned average sleep inertia of 309 min (~5 hours) which might be incorrectly registered input of time in bed sicne average time asleep for this user is 10.8 hours
+We decide to keep this observation. 
+
 
 
 
