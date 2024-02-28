@@ -129,4 +129,22 @@ LIMIT 10
 ![activity](summary_activity.png)
 
 
+- Average, minimum and maximum values of time asleep (in hours):
+```
+SELECT DISTINCT(Id),
+       ROUND(AVG(time_asleep_h), 1) AS avg_time_asleep_h,
+       ROUND(MIN(time_asleep_h), 1) AS min_time_asleep_h,
+       ROUND(MAX(time_asleep_h), 1) AS max_time_asleep_h
+
+
+FROM `project-bellabeat-414921.fitbit.COMBINED_DATA`
+WHERE time_asleep_h is NOT Null
+GROUP BY Id
+LIMIT 10
+;
+```
+
+
+
+
 
