@@ -100,7 +100,7 @@ SELECT DISTINCT(Id),
        ROUND(AVG(total_steps), 1) AS avg_steps,
        ROUND(AVG(total_distance), 1) AS avg_distance,
        ROUND(AVG(calories), 1) AS avg_calories
-FROM `project-bellabeat-414921.fitbit.COMBINED_DATA`
+FROM `project-bellabeat-414921.fitbit.filtered_data`
 GROUP BY Id
 ORDER BY avg_steps DESC
 LIMIT 10
@@ -120,12 +120,13 @@ SELECT  DISTINCT(Id),
        ROUND(AVG(light_min), 1) AS avg_light_min,
        ROUND(AVG(sed_min), 1) as avg_sedentary_min
 
-FROM `project-bellabeat-414921.fitbit.COMBINED_DATA`
+FROM `project-bellabeat-414921.fitbit.filtered_data`
 GROUP BY Id
 ORDER BY avg_active_min DESC
 LIMIT 10
 ;
 ```
+![activity](summary_activity.png)
 
 
 
