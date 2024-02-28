@@ -38,8 +38,7 @@ FROM `project-bellabeat-414921.fitbit.sleep_day`
 
 Then, this query was saved as a new table named ‘sleep_inertia’ and downloaded to the local folder that contains the dataset.
 
-2. The same formatting (STRING into TIMESTAMP) was done for column ‘Time’ in ‘heart_rate_seconds’ and used CAST function to separate date and time values and saved as new csv file named  ‘clean_heart_rate’ in local folder:
-
+2. The same formatting (STRING into TIMESTAMP) was done for column ‘Time’ in ‘heart_rate_seconds’ and used CAST function to separate date and time values and saved as new csv file named ‘clean_heart_rate’ in local folder. This table will be used in Tableau to reflect daily trends of heart rate:
 ```
 WITH heart_rate_1 AS
       (SELECT Id,
