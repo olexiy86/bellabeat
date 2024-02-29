@@ -240,7 +240,7 @@ alpha=0.2, color="green", fill="green")
 
 
 ## Summary of analysis and key findings:
- - Axploratory Data Analysis (EDA) using RStudio allowed us to identify that Sleep Inertia (the difference between ‘time asleep’ and ‘time in bed’) may serve as an additional indicator of activity level and better quality lifestyle in addition to other metrics.
+ - Exploratory Data Analysis (EDA) using RStudio allowed us to identify that Sleep Inertia (the difference between ‘time asleep’ and ‘time in bed’) may serve as an additional indicator of activity level and better quality lifestyle in addition to other metrics.
 - On three different scatter plots shown above it is important to notice that most of the user’s sleep inertia values in this study fell between 0 and 100 min. There are some users with sleep inertia between 100 and 350 min.
 - We can assume that the users with higher daily activity levels (based on calories,  total steps, total distance and active minutes) tend to have lower sleep inertia values (between 0 and 75 minutes). At the same time users with high values of sleep inertia (between 100 and 375 min) spent less calories, did less steps, and had less active minutes.
 - Although statistically significant correlations were not found between sleep inertia and calories burnt, total steps, total distance and active minutes. Further analysis required with larger data sample to establish relations between these parameters. Exploring daily activity patterns of users with lower sleep inertia may provide better understanding of healthy and active lifestyle.
