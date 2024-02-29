@@ -9,7 +9,6 @@ knowledge about their own health and habits.
 Main task of the project was to analyze smart device usage data in order to gain insights into how consumers use non-Bellabeat smart
 devices and apply these insights into one Bellabeat product. Discovered insights will help guide marketing strategy for the company. 
 
-**Task:** explore user’s data to uncover trends and patterns in daily activities and identify key wellness indicators of healthy lifestyle.
 
 **Questions:**
  - What are some trends in smart device usage?
