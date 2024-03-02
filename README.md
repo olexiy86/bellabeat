@@ -9,7 +9,7 @@ knowledge about their own health and habits.
 Business task of the project was to analyze smart device usage data in order to gain insights into how consumers use non-Bellabeat smart
 devices and apply these insights into one Bellabeat product. Discovered insights will help guide marketing strategy for the company. 
 
-The approach we employed in this case study was to explore monthly and weekly trends of sleep patterns (sleep inertia) and find how it relates to user's daily activity.
+The approach we employed in this case study was to explore daily and weekly trends of sleep patterns (sleep inertia) and find how it relates to user's daily activity.
 Quality of sleep has the most impact on our daily life and energy level, so we decided to focus on this parameter.
 
 **Questions:**
@@ -78,7 +78,7 @@ FULL OUTER JOIN project-bellabeat-414921.fitbit.sleep_inertia ON daily_activity.
 
 Output of this query was saved as ‘filtered_data’ csv file in the local folder.
 
-4. Since we also wanted to look into weekly and montly trends of sleep and activity patterns we combined two tables using JOIN clause with two fields ('Id' and 'date') to ensure  that Id and date values are matching. This query we saved as a csv file 'activity_sleep' which will be used to create visualizartions in Tableau.
+4. Since we also wanted to look into daily and weekly trends of sleep and activity patterns we combined two tables using JOIN clause with two fields ('Id' and 'date') to ensure  that Id and date values are matching. This query we saved as a csv file 'activity_sleep' which will be used to create visualizartions in Tableau.
 ```
 SELECT  daily_activity.Id, 
         daily_activity.ActivityDate AS date,
@@ -194,7 +194,7 @@ We decide to keep this observation.
 
 
 
-## Initial exploratory visualizations in R Studio.
+## Initial exploratory visualizations in Tableau and R Studio.
 After performing descriptive statistics we moved our analysis in R Studio. 
 The goal was to study relationships and patterns between sleep inertia and other observed wellness metrics.
 
