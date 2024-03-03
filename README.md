@@ -1,4 +1,4 @@
-# Wellness
+# Bellabeat Project
 
 ## About this project
 
