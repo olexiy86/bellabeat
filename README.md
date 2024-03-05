@@ -9,7 +9,7 @@ knowledge about their own health and habits.
 Business task of the project was to analyze smart device usage data in order to gain insights into how consumers use non-Bellabeat smart
 devices and apply these insights into one Bellabeat product. Discovered insights will help guide marketing strategy for the company. 
 
-The approach we employed in this case study was to explore daily and weekly trends of sleep patterns (sleep inertia) and find how it relates to user's daily activity.
+The approach we employed in this case study was to explore daily and weekly trends of sleep patterns (sleep inertia) and find how they relate to user's daily activity.
 Quality of sleep has the most impact on our daily life and energy level, so we decided to focus on this parameter.
 
 **Questions:**
