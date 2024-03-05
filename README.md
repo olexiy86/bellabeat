@@ -195,13 +195,17 @@ We decide to keep this observation.
 
 
 ## Initial exploratory visualizations in Tableau and R Studio.
-After performing descriptive statistics we moved our analysis Tableau Public in R Studio to create present data in vusial form. 
+After performing descriptive statistics we moved our analysis into Tableau Public and R Studio to present data in visual form. 
 The goal was to study relationships and patterns between sleep inertia and other observed wellness metrics.
 
-Frist, we uploaded previously saved csv files to create barcharts in Tableau to demonstate how sleep inertia and daily actvity relate to each other:
+First, we uploaded previously saved csv files to create barcharts in Tableau to demonstate how sleep inertia and daily actvity relate to each other.
 
-<img src="activemin_sleep_daily.png" width="700" height="350">
+1. The barchart below reflects day-to-day trend of avtive minutes and sleep inertia in a span of 30 days. It shows that at the highest activity minutes values the sleep inertia values are low, and the opposite is true.
+   We cannot directly say that one causes the other since activity minutes might reflect days where users did some sports activities:
+<img src="activemin_sleep_daily.png" width="1000" height="600">
 
+2. We also created barchart that shows weekday dynamics of active minutes and sleep inertia. Here sleep inertia is at the highest on Sunday where low activity minutes are registered.
+<img src="weekday trend activity" width="1000" height="600">
 
 Setting up environment:
 ```
