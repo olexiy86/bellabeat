@@ -194,10 +194,11 @@ We decide to keep this observation.
 
 
 
-## Initial exploratory visualizations in Tableau and R Studio.
+## Initial exploratory visualizations.
 After performing descriptive statistics we moved our analysis into Tableau Public and R Studio to present data in visual form. 
 The goal was to study relationships and patterns between sleep inertia and other observed wellness metrics.
 
+### Using Tableau Public.
 First, we uploaded previously saved csv files to create barcharts in Tableau to demonstate how sleep inertia and daily actvity relate to each other.
 
 1. The barchart below reflects day-to-day trend of avtive minutes and sleep inertia in a span of 30 days. It shows that at the highest activity minutes values the sleep inertia values are low, and the opposite is true.
@@ -206,6 +207,13 @@ First, we uploaded previously saved csv files to create barcharts in Tableau to 
 
 2. We also created barchart that shows weekday dynamics of active minutes and sleep inertia. Here sleep inertia is at the highest on Sunday where low activity minutes are registered.
 <img src="weekday trend activity.png" width="800" height="400">
+
+3. Exploring sleep inertia and total steps showed the same trend:
+<img src="weekday trend steps.png" width="800" height="400">
+
+
+### Using R Studio.
+To continue explratoty analysis in R Studio we focused only on reations between active minutes and sleep inertia and calories and sleep inertia.
 
 Setting up environment:
 ```
@@ -224,23 +232,9 @@ First, we supply a function argument to scale ggplot. We use that function to ca
 ```
 number_ticks <- function(n) {function(limits) pretty(limits, n)}
 ```
-Then we create a scatterplot **Sleep inertia vs Total Steps**:
-```
-ggplot(data=filtered_data,aes(x=sleep_inertia_min, y=total_steps)) + 
-  geom_point(color='#5C1E7E', size = 1) +
-  scale_x_continuous(breaks=number_ticks(10)) +
-  labs(title = "Sleep Inertia vs. Steps") +
-  xlab('Sleep Inertia (min)') +
-  ylab('Total Steps') +
-  annotate("rect", xmin=c(0), xmax=c(70), ymin=c(18000) , ymax=c(24000), alpha=0.2, color="green", fill="green")
-```
-<img src="Steps.jpeg" width="750" height="500">
-
-NOTE: Area highlighted with green shows that the highest number of steps is attributed to lower sleep inertia.
 
 
-
-Next we plot **Sleep Inertia vs Active Minutes**:
+Next we plotted **Sleep Inertia vs Active Minutes**:
 ```
 ggplot(data=filtered_data, aes(x=sleep_inertia_min, y=active_min)) + 
   geom_point(color='#5C1E7E', size = 1) +
@@ -250,11 +244,14 @@ ggplot(data=filtered_data, aes(x=sleep_inertia_min, y=active_min)) +
   ylab('active minutes') +
   annotate("rect", xmin=c(0), xmax=c(80), ymin=c(175), ymax=c(220), alpha=0.2, color="green", fill="green")
 ```
-
 <img src="active_minutes.jpeg" width="750" height="500">
 
+*NOTE: Area highlighted with green shows that the highest values of activity minutes are attributed to lower sleep inertia.*
 
-Additionally, we create scatterplot **Sleep Inertia vs Calories**:
+
+
+
+Additionally, we created scatterplot **Sleep Inertia vs Calories**:
 ```
 ggplot(data=filtered_data, aes(x=sleep_inertia_min, y=calories)) + 
   geom_point(color='#5C1E7E', size = 1) +
@@ -271,22 +268,21 @@ alpha=0.2, color="green", fill="green")
 
 
 ## Summary of analysis and key findings:
- - Exploratory Data Analysis (EDA) using RStudio allowed us to identify that Sleep Inertia (the difference between ‘time asleep’ and ‘time in bed’) may serve as an additional indicator of activity level and better quality lifestyle in addition to other metrics.
-- On three different scatter plots shown above it is important to notice that most of the user’s sleep inertia values in this study fell between 0 and 100 min. There are some users with sleep inertia between 100 and 350 min.
-- We can assume that the users with higher daily activity levels (based on calories,  total steps, total distance and active minutes) tend to have lower sleep inertia values (between 0 and 75 minutes). At the same time users with high values of sleep inertia (between 100 and 375 min) spent less calories, did less steps, and had less active minutes.
-- Although statistically significant correlations were not found between sleep inertia and calories burnt, total steps, total distance and active minutes. Further analysis required with larger data sample to establish relations between these parameters. Exploring daily activity patterns of users with lower sleep inertia may provide better understanding of healthy and active lifestyle.
+ - Exploratory Data Analysis (EDA) using Tableau and R Studio allowed us to identify that Sleep Inertia (the difference between ‘time asleep’ and ‘time in bed’) may serve as an additional indicator of activity level and better quality lifestyle in addition to other metrics.
+- On the graphs shown above it is important to note that most of the user’s low sleep inertia values in this study were related to a higher count of steps, activity munites and calories burnt.
+- We can assume that when users have higher daily activity levels (based on calories,  total steps, and active minutes) they tend to have lower sleep inertia values (between 0 and 75 minutes). At the same time users with high values of sleep inertia (between 100 and 375 min) spent less calories, did less steps, and had less active minutes.
+- Although statistically significant correlations were not found between sleep inertia and calories burnt, total steps, and active minutes. Further analysis required with larger data sample to establish relations between these parameters. Exploring daily activity patterns of users with lower sleep inertia may provide better understanding of healthy and active lifestyle.
 
 
 ## Recommendations.
 Phenomenon of sleep inertia is well outlined in the article by [Tanja Premru-Sršen, M.D., Ph.D.](https://bellabeat.com/sleep/sleep-inertia/).
 
-Adding additional measurement to Ivy Health Tracker that monitors sleep inertia will greatly improve users' awareness and understanding about resting and activity status. Low sleep inertia reflects better quality of sleep and higher energy level, and vice versa. 
+Adding additional measurement to **Ivy Health Tracker** that monitors sleep inertia will greatly improve users' awareness and understanding about resting and activity status. Also adding device notification (via phone app or tracker) to let user know when to get up from bed to establish healty habits. Low sleep inertia reflects better quality of sleep and higher energy level, and vice versa. 
 
 
 ## Creating an interactive dashboard in Tableau. 
-To demonstrate relations between sleep inertia and calories, activity minutes and  heart rate, we created an interactive dashboard [Wellnes metrics](https://public.tableau.com/views/Dailyheartratetrend/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link). By using filter ‘user’  this dashboard demonstrates how key metrics change from user to user. Since the heart rate dataset was limited to only 7 distinct user Ids, the filter has only 7 options. There is one user that has no data on ‘sleep inertia’
+To demonstrate relations between sleep inertia and calories, activity minutes and  heart rate, we created an interactive dashboard [Wellnes metrics](https://public.tableau.com/views/Dailyheartratetrend/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link). By using filter ‘user’  this dashboard demonstrates how key metrics change from user to user. Since the heart rate dataset was limited to only 7 distinct user Ids, the filter has only 7 options. There is one user that has no data on ‘sleep inertia’.
 
-<img src="wellness.png" width="750" height="600">
 
 
 
