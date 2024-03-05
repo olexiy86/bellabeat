@@ -205,7 +205,7 @@ First, we uploaded previously saved csv files to create barcharts in Tableau to 
 <img src="activemin_sleep_daily.png" width="1000" height="600">
 
 2. We also created barchart that shows weekday dynamics of active minutes and sleep inertia. Here sleep inertia is at the highest on Sunday where low activity minutes are registered.
-<img src="weekday trend activity" width="1000" height="600">
+<img src="weekday trend activity.png" width="800" height="400">
 
 Setting up environment:
 ```
