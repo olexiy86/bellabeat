@@ -203,7 +203,7 @@ First, we uploaded previously saved csv files to create barcharts in Tableau to 
 
 1. The barchart below reflects day-to-day trend of avtive minutes and sleep inertia in a span of 30 days. It shows that at the highest activity minutes values the sleep inertia values are low, and the opposite is true.
    We cannot directly say that one causes the other since activity minutes might reflect days where users did some sports activities:
-<img src="activemin_sleep_daily.png" width="1000" height="600">
+<img src="activemin_sleep_daily.png" width="850" height="500">
 
 2. We also created barchart that shows weekday dynamics of active minutes and sleep inertia. Here sleep inertia is at the highest on Sunday where low activity minutes are registered.
 <img src="weekday trend activity.png" width="800" height="400">
